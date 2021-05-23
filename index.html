@@ -116,12 +116,12 @@
         </div>
         <script>
             $(function () {
-                var tween = TweenMax.to(".truck", 1, { ease: Linear.easeNone, x: "-350%"});
+                var tween = TweenMax.to(".truck", 1, { ease: Linear.easeNone, x: "-350%", y: "-110%" });
 
                 var scene = new ScrollMagic.Scene({
                     triggerElement: ".tomato",
-                    duration: 700,
-                    offset: 1600, //1400 base on from page 2
+                    duration: 650,
+                    offset: 1500, //1400 base on from page 2
 
                 })
                     .setPin(".truck", { pushFollowers: false })
@@ -133,10 +133,41 @@
     </section>
 
     <section id="page4" class="page">
-    <img class="gognam" src="./img/gognam.png" alt="gognam">
+        <img class="gognam" src="./img/gognam.png" alt="gognam">
+        <img class="drop" src="./img/drop.png" alt="drop">
+        <div id="quote5" class="q-set q-size-n qoute">
+            จะมีท่อส่งน้ำจากต้นน้ำไปยังบ้านทุกหลัง ให้ทุกคนได้เข้าถึงน้ำสะอาดที่ใช้ในการอุปโภค บริโภค และการเกษตร
+            น้ำสายนี้ที่เย็นชื่นใจชาวบ้านจะเรียกว่า”น้ำประปาภูเขา
+        </div>
+        <script>
+            $(function () {
+                var tween = TweenMax.to(".drop", 1, { scale: 1, opacity: 1 });
+
+                var scene = new ScrollMagic.Scene({
+                    triggerElement: ".gognam",
+                    duration: 450,
+                    offset: 300,
+
+                })
+                    .setPin(".drop", { pushFollowers: false })
+                    .setTween(tween)
+                    .on('leave', () => {
+                        $('.drop').hide();
+                        $('.drop').css('zIndex', '-99');
+                    })
+                    .on('enter', () => {
+                        $('.drop').show();
+                    })
+                    .addIndicators({ name: "gognam" })
+                    .addTo(controller);
+            });
+        </script>
     </section>
 
-
+    <section id="page5" class="page">
+        <img class="water1" src="./img/water1.png" alt="water1">
+        <div class="box"></div>
+    </section>
 
     <script src="./js/script.js"></script>
 

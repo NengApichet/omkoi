@@ -52,17 +52,15 @@ body {
   height: 100%;
 }
 
-.tomato, .tat, .truck, .gognam {
+.tomato, .tat, .truck, .gognam, .drop, .water1 {
   position: relative;
   margin: 0 auto;
   display: inline-block;
 }
 
 .tomato {
-  min-width: 10vw;
   height: 10vw;
   margin-left: 12%;
-  opacity: 1;
 }
 
 .tat {
@@ -72,17 +70,38 @@ body {
 }
 
 .truck {
-  margin-top: -10%;
+  margin-top: 0;
   margin-left: 100%;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg) scale(0.7);
+          transform: rotateY(180deg) scale(0.7);
   height: 41vw;
 }
 
 .gognam {
-  margin-top: 15%;
-  margin-left: -79%;
+  margin-top: 5%;
+  margin-left: -86%;
   height: 39vw;
+}
+
+.drop {
+  height: 10vw;
+  margin-left: -17%;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
+}
+
+.water1 {
+  margin-top: -5%;
+  min-width: 200%;
+  height: 400px;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  background-color: #58d3ff;
+  margin-top: -1%;
 }
 
 .q-size-n {
@@ -100,13 +119,13 @@ body {
 
 #quote1 {
   top: 5%;
-  width: 400px;
+  width: 30%;
   margin-top: 21%;
 }
 
 #quote2 {
   margin-top: 30%;
-  width: 400px;
+  width: 30%;
 }
 
 #quote3 {
@@ -117,10 +136,16 @@ body {
 }
 
 #quote4 {
-  margin-top: -10%;
+  margin-top: -12%;
   margin-left: 60%;
   width: 30%;
   text-align: start;
+}
+
+#quote5 {
+  margin-top: -10%;
+  margin-left: 45%;
+  width: 40%;
 }
 
 .q-anime {
@@ -165,12 +190,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 100vh;
-}
-
-#page4 {
-  background-image: url("../img/glass.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-height: 100vh;
+  width: 100vw;
 }
 /*# sourceMappingURL=style.css.map */
