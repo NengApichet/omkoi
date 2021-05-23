@@ -40,9 +40,6 @@ body
         left: 56%
         height: 100%
 
-.hide
-    opacity: 0 !important
-
 %image-sets
     position: relative
     margin: 0 auto
@@ -60,6 +57,13 @@ body
     margin-top: -23%
     margin-left: 33%
     height: 50vw
+
+.truck
+    @extend  %image-sets
+    margin-top: -10%
+    margin-left: 100%
+    transform: rotateY(180deg)
+    height: 41vw
 
 .q-size-n
     font-size: 1.1rem
@@ -87,6 +91,12 @@ body
     width: 30%
     text-align: start
 
+#quote4
+    margin-top: -30%
+    margin-left: 60%
+    width: 30%
+    text-align: start
+
 .q-anime
     display: block
     .text-wrapper
@@ -110,3 +120,10 @@ body
         display: inline-block
         line-height: 1em
         color: #184b00
+
+#page3
+    height: 100%
+    width: 100%
+    background-image: url('../img/bg_mountain.jpg')
+    background-repeat: no-repeat
+    background-size: contain

@@ -60,7 +60,7 @@
                 })
                     .setPin(".tomato", { pushFollowers: true })
                     .setTween(tween)
-                    .addIndicators({ name: "1 (duration: 400, offset: 100)" })
+                    .addIndicators({ name: "tomato down" })
                     .addTo(controller);
             });
         </script>
@@ -74,14 +74,11 @@
             เพื่อตอกย้ำให้เห็นว่า
             น้ำทำให้ที่นี่เป็นแหล่งปลูกมะเขือเทศแห่งหนึ่งที่สำคัญของประเทศไทย
         </div>
-        <div class="s3"></div>
-
-
         <script>
             $(function () {
-                var tween = TweenMax.to(".tomato", 1, { rotation: 720, ease: Linear.easeNone, scale: .2});
+                var tween = TweenMax.to(".tomato", 1, { rotation: 720, ease: Linear.easeNone, scale: .2 });
 
-                var tween2 = TweenMax.to(".tat", 1, { ease: Linear.easeNone, x:"120%"});
+                var tween2 = TweenMax.to(".tat", 1, { ease: Linear.easeNone, x: "120%" });
 
                 var scene = new ScrollMagic.Scene({
                     triggerElement: ".tomato",
@@ -90,7 +87,10 @@
                 })
                     .setPin(".tomato", { pushFollowers: true })
                     .setTween(tween)
-                    .addIndicators({ name: "2 (duration: 500)" })
+                    .on('enter', () => {
+                        $('.tomato').show();
+                    })
+                    .addIndicators({ name: "tomato rotate and down" })
                     .addTo(controller);
 
                 var scene2 = new ScrollMagic.Scene({
@@ -100,13 +100,39 @@
                 })
                     .setPin(".tat", { pushFollowers: false })
                     .setTween(tween2)
-                    .setClassToggle(".tomato", "hide")
-                    .addIndicators({ name: "truck" })
+                    .on("start", () => {
+                        $(".tomato").hide();
+                    })
+                    .addIndicators({ name: "truck amd tomato" })
                     .addTo(controller);
             });
         </script>
     </section>
 
+    <section id="page3" class="page">
+        <img class="truck" alt="truck" src="./img/truck.png" />
+        <div id="quote4" class="q-set q-size-n qoute">
+            “น้ำสะอาด” จากห้วยน้ำ ลำธาร ถือเป็นหัวใจหลักในการทำเกษตรกรรม รวมถึงเป็นน้ำที่ใช้อุปโภค บริโภค
+            ในบางปีที่น้ำฝนไม่เพียงพอ เกษตรกรจำเป็นต้องบรรทุกน้ำใส่รถกระบะ เพื่อใช้ทำการเกษตร
+        </div>
+        <div class="s3"></div>
+        <script>
+            $(function () {
+                var tween = TweenMax.to(".truck", 1, { ease: Linear.easeNone, x: "-300%", scale: .4 });
+
+                var scene = new ScrollMagic.Scene({
+                    triggerElement: ".tomato",
+                    duration: 700,
+                    offset: 1600, //1400 base on from page 2
+
+                })
+                    .setPin(".truck", { pushFollowers: true })
+                    .setTween(tween)
+                    .addIndicators({ name: "truck" })
+                    .addTo(controller);
+            });
+        </script>
+    </section>
 
 
 
