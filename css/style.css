@@ -77,6 +77,14 @@ body {
   height: 41vw;
 }
 
+.house1 {
+  position: absolute;
+  height: 45vw;
+  margin-top: 4%;
+  margin-left: 0%;
+  z-index: 99;
+}
+
 .gognam {
   margin-top: 5%;
   margin-left: -86%;
@@ -185,11 +193,27 @@ body {
   background-size: contain;
 }
 
+#page2 {
+  background: #9afcff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9afcff), color-stop(15%, #f9fdf5));
+  background: linear-gradient(0deg, #9afcff 0%, #f9fdf5 15%);
+}
+
 #page3 {
   background-image: url("../img/bg_mountain.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 100vh;
   width: 100vw;
+}
+
+.dropbox {
+  width: 100vw;
+  height: 25%;
+  margin-top: -45%;
+  position: absolute;
+  z-index: -1;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(60%, #94df5e));
+  background: linear-gradient(0deg, white 0%, #94df5e 60%);
 }
 /*# sourceMappingURL=style.css.map */
