@@ -5,7 +5,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .s1 {
@@ -52,7 +52,7 @@ body {
   height: 100%;
 }
 
-.tomato, .tat, .truck, .gognam, .drop, .water1 {
+.tomato, .tat, .truck, .gognam, .drop, .water1, .stalactitie1, .stalactite2, .pickaxe {
   position: relative;
   margin: 0 auto;
   display: inline-block;
@@ -105,11 +105,44 @@ body {
   height: 400px;
 }
 
+.dropbox {
+  width: 100vw;
+  height: 25%;
+  margin-top: -47%;
+  position: absolute;
+  z-index: -1;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(60%, #94df5e));
+  background: linear-gradient(0deg, white 0%, #94df5e 60%);
+}
+
 .box {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #58d3ff;
+  background: #58d3ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#58d3ff), color-stop(54%, #487e91), to(#523a2f));
+  background: linear-gradient(180deg, #58d3ff 0%, #487e91 54%, #523a2f 100%);
   margin-top: -1%;
+}
+
+.stalactitie1 {
+  z-index: 99;
+  width: 100%;
+}
+
+.stalactite2 {
+  margin-left: 0;
+  margin-top: -70em;
+  width: 100%;
+  z-index: 1;
+}
+
+.pickaxe {
+  margin-top: -10%;
+  margin-left: 50%;
+  height: 40vw;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .q-size-n {
@@ -207,13 +240,7 @@ body {
   width: 100vw;
 }
 
-.dropbox {
-  width: 100vw;
-  height: 25%;
-  margin-top: -45%;
-  position: absolute;
-  z-index: -1;
-  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(60%, #94df5e));
-  background: linear-gradient(0deg, white 0%, #94df5e 60%);
+#page6 {
+  background: #0f0f0f;
 }
 /*# sourceMappingURL=style.css.map */
