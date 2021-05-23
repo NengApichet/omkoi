@@ -141,6 +141,8 @@
             จะมีท่อส่งน้ำจากต้นน้ำไปยังบ้านทุกหลัง ให้ทุกคนได้เข้าถึงน้ำสะอาดที่ใช้ในการอุปโภค บริโภค และการเกษตร
             น้ำสายนี้ที่เย็นชื่นใจชาวบ้านจะเรียกว่า”น้ำประปาภูเขา
         </div>
+        <img class="water1" src="./img/water1.png" alt="water1">
+        <div class="box"></div>
         <script>
             $(function () {
                 let tween = TweenMax.to(".drop", 1, { scale: 1, opacity: 1 });
@@ -167,16 +169,21 @@
     </section>
 
     <section id="page5" class="page">
-        <img class="water1" src="./img/water1.png" alt="water1">
-        <div class="box"></div>
-
-    </section>
-
-    <section id="page6" class="page">
         <img class="stalactitie1" src="./img/stalactitie1.png" alt="stalactitie1">
         <img class="stalactite2" src="./img/stalactite2.png" alt="stalactite2">
         <img class="pickaxe" src="./img/pickaxe.png" alt="pickaxe">
-        <div class="s4"></div>
+        <div class="paper">
+            <div id="quote6" class="text qoute q-size-n q-paper">ในปี 2543
+                ได้มีการยื่นคำขอประทานบัตรทำเหมืองถ่านหินจากกรมอุตสาหกรรมพื้นฐานและการเหมืองแร่
+                ระยะเวลาในการยื่นขอทำสัมปทาน 10 ปี หากโครงการเหมืองแห่งนี้เกิดขึ้นจริง
+                อาจส่งผลให้ชุมชนไม่สามารถใช้ทรัพยากรแห่งนี้เพื่อปลูกพืชผลทางการเกษตรรวมถึงใช้อุปโภคบริโภคในชีวิตประจำวันได้อีกต่อไป
+            </div>
+        </div>
+        <div id="quote7" class="q-set q-size-n qoute">
+            นี่ไม่ใช่ปัญหาที่มีแค่ชุมชนในอมก๋อยเผชิญ แต่รวมถึงพืชผลทางการเกษตรที่จะได้รับผลกระทบไปด้วย
+            ผลกระทบเหล่านี้จะมาถึงพวกเราที่อยู่ในส่วนของผู้บริโภคในห่วงโซ่ระบบการผลิตอาหาร
+        </div>
+
         <script>
             let images = [
                 "./img/pickaxe.png",
@@ -203,9 +210,9 @@
             );
 
             let scene = new ScrollMagic.Scene({
-                triggerElement: ".stalactitie1", 
+                triggerElement: ".stalactitie1",
                 duration: 1000,
-                offset: 200
+                offset: 300
             })
                 .setTween(tween)
                 .addIndicators({ name: "pickaxe" })
@@ -213,6 +220,9 @@
         </script>
     </section>
 
+    <section id="page6" class="page">
+        <div class="s5"></div>
+    </section>
     <script src="./js/script.js"></script>
 
 </body>
