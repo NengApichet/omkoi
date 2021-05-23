@@ -65,6 +65,17 @@ body
     transform: rotateY(180deg)
     height: 41vw
 
+.gognam
+    @extend  %image-sets
+    margin-top: 15%
+    margin-left: -79%
+    height: 39vw
+
+%image-m
+    position: absolute
+    width: 100%
+    display: inline-block
+
 .q-size-n
     font-size: 1.1rem
 
@@ -92,7 +103,7 @@ body
     text-align: start
 
 #quote4
-    margin-top: -30%
+    margin-top: -10%
     margin-left: 60%
     width: 30%
     text-align: start
@@ -119,11 +130,21 @@ body
     .letter
         display: inline-block
         line-height: 1em
-        color: #184b00
+        color: #fff
 
-#page3
-    height: 100%
-    width: 100%
-    background-image: url('../img/bg_mountain.jpg')
+#page1
+    background-image: url('../img/mountain2.png'),url('../img/mountain1.png'), url('../img/mountain3.png')
     background-repeat: no-repeat
     background-size: contain
+
+#page3
+    background-image: url('../img/bg_mountain.jpg')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    min-height: 100vh
+
+#page4
+    background-image: url('../img/glass.jpg')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    min-height: 100vh

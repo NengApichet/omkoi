@@ -52,7 +52,7 @@ body {
   height: 100%;
 }
 
-.tomato, .tat, .truck {
+.tomato, .tat, .truck, .gognam {
   position: relative;
   margin: 0 auto;
   display: inline-block;
@@ -77,6 +77,12 @@ body {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   height: 41vw;
+}
+
+.gognam {
+  margin-top: 15%;
+  margin-left: -79%;
+  height: 39vw;
 }
 
 .q-size-n {
@@ -111,7 +117,7 @@ body {
 }
 
 #quote4 {
-  margin-top: -30%;
+  margin-top: -10%;
   margin-left: 60%;
   width: 30%;
   text-align: start;
@@ -145,14 +151,26 @@ body {
 .q-anime .letter {
   display: inline-block;
   line-height: 1em;
-  color: #184b00;
+  color: #fff;
+}
+
+#page1 {
+  background-image: url("../img/mountain2.png"), url("../img/mountain1.png"), url("../img/mountain3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #page3 {
-  height: 100%;
-  width: 100%;
   background-image: url("../img/bg_mountain.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+#page4 {
+  background-image: url("../img/glass.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

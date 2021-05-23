@@ -34,7 +34,6 @@
                 <path d="M0 0 v50" stroke-width="1" stroke="#4b2800aa" fill="none" />
             </svg>
         </div>
-
         <h1 id="quote1" class="q-set q-size-n qoute q-anime">
             <span class="text-wrapper">
                 <span class="line line1"></span>
@@ -115,10 +114,9 @@
             “น้ำสะอาด” จากห้วยน้ำ ลำธาร ถือเป็นหัวใจหลักในการทำเกษตรกรรม รวมถึงเป็นน้ำที่ใช้อุปโภค บริโภค
             ในบางปีที่น้ำฝนไม่เพียงพอ เกษตรกรจำเป็นต้องบรรทุกน้ำใส่รถกระบะ เพื่อใช้ทำการเกษตร
         </div>
-        <div class="s3"></div>
         <script>
             $(function () {
-                var tween = TweenMax.to(".truck", 1, { ease: Linear.easeNone, x: "-300%", scale: .4 });
+                var tween = TweenMax.to(".truck", 1, { ease: Linear.easeNone, x: "-350%"});
 
                 var scene = new ScrollMagic.Scene({
                     triggerElement: ".tomato",
@@ -126,7 +124,7 @@
                     offset: 1600, //1400 base on from page 2
 
                 })
-                    .setPin(".truck", { pushFollowers: true })
+                    .setPin(".truck", { pushFollowers: false })
                     .setTween(tween)
                     .addIndicators({ name: "truck" })
                     .addTo(controller);
@@ -134,6 +132,9 @@
         </script>
     </section>
 
+    <section id="page4" class="page">
+    <img class="gognam" src="./img/gognam.png" alt="gognam">
+    </section>
 
 
 
