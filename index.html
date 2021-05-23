@@ -28,11 +28,13 @@
     <script> var controller = new ScrollMagic.Controller();</script>
 
     <section id="page1" class="page">
+
         <div class="header qoute">อมก๋อย
             <svg viewBox="0 0 100 100" class="role">
                 <path d="M0 0 v50" stroke-width="1" stroke="#4b2800aa" fill="none" />
             </svg>
         </div>
+
         <h1 id="quote1" class="q-set q-size-n qoute q-anime">
             <span class="text-wrapper">
                 <span class="line line1"></span>
@@ -40,33 +42,69 @@
                     ทำให้เหมาะสำหรับการท่องเที่ยวทางธรรมชาติที่มีความอุดมสมบูรณ์</span>
             </span>
         </h1>
+
         <div id="quote2" class="q-set q-size-n qoute">
             ทั้งนี้ ยังเป็นบ้านของกลุ่มชาติพันธุ์กะเหรี่ยงโป มีการทำไร่หมุนเวียน เป็นแหล่งปลูกมะเขือเทศ
             และฟักทองแหล่งใหญ่เพื่อส่งออกไปยังหลายพื้นที่ ผลิตผลทั้งสองชนิดถือเป็นรายได้หลักของชุมชนกะเหรี่ยงแห่งนี้
         </div>
-        <div class="tomato"><img alt="tomato" src="./img/tomato.png" />
-        </div>
-        <div class="s2"></div>
+
+        <img class="tomato" alt="tomato" src="./img/tomato.png" />
         <script>
             $(function () {
                 var tween = TweenMax.to(".tomato", 1, { rotation: 360, ease: Linear.easeNone });
 
                 var scene = new ScrollMagic.Scene({
                     triggerElement: ".tomato",
-                    duration: 600,
+                    duration: 400,
                     offset: 100,
                 })
                     .setPin(".tomato", { pushFollowers: true })
                     .setTween(tween)
-                    .setClassToggle("#quote2", "q-anime")
-                    .addIndicators({ name: "1 (duration: 600, offset: 100)" })
+                    .addIndicators({ name: "1 (duration: 400, offset: 100)" })
                     .addTo(controller);
             });
         </script>
-    </section>
-    <section id="page2" class="page">
-        <!-- <div class="s1"></div> -->
 
+    </section>
+
+    <section id="page2" class="page">
+        <img class="tat" alt="truck and tomato" src="./img/truckandtomato.png" />
+        <div id="quote3" class="q-set q-size-n qoute">
+            “หน้าแล้งไม่มีมะเขือเทศที่ไหนมีแค่กะเบอะดินแค่อมก๋อยที่เดียว” คำพูดของผู้รับซื้อมะเขือเทศ
+            เพื่อตอกย้ำให้เห็นว่า
+            น้ำทำให้ที่นี่เป็นแหล่งปลูกมะเขือเทศแห่งหนึ่งที่สำคัญของประเทศไทย
+        </div>
+        <div class="s3"></div>
+
+
+        <script>
+            $(function () {
+                var tween = TweenMax.to(".tomato", 1, { rotation: 720, ease: Linear.easeNone, scale: .2});
+
+                var tween2 = TweenMax.to(".tat", 1, { ease: Linear.easeNone, x:"120%"});
+
+                var scene = new ScrollMagic.Scene({
+                    triggerElement: ".tomato",
+                    duration: 500,
+                    offset: 500,
+                })
+                    .setPin(".tomato", { pushFollowers: true })
+                    .setTween(tween)
+                    .addIndicators({ name: "2 (duration: 500)" })
+                    .addTo(controller);
+
+                var scene2 = new ScrollMagic.Scene({
+                    triggerElement: ".tomato",
+                    duration: 300,
+                    offset: 1100,
+                })
+                    .setPin(".tat", { pushFollowers: false })
+                    .setTween(tween2)
+                    .setClassToggle(".tomato", "hide")
+                    .addIndicators({ name: "truck" })
+                    .addTo(controller);
+            });
+        </script>
     </section>
 
 

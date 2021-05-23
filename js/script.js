@@ -12,7 +12,7 @@ anime
     scaleY: [0, 1],
     opacity: [0.5, 1],
     easing: "linear",
-    duration: 700,
+    duration: 100,
   })
   .add({
     targets: ".q-anime .line",
@@ -22,14 +22,14 @@ anime
         10,
     ],
     easing: "linear",
-    duration: 700,
-    delay: 100,
+    duration: 100,
+    delay: 10,
   })
   .add({
     targets: ".q-anime .letter",
     opacity: [0, 1],
     easing: "linear",
-    duration: 600,
+    duration: 50,
     offset: "-=775",
     delay: (el, i) => 34 * (i + 1),
   })
