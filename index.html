@@ -34,13 +34,17 @@
                 <path d="M0 0 v50" stroke-width="1" stroke="#4b2800aa" fill="none" />
             </svg>
         </div>
-        <h1 id="quote1" class="q-set q-size-n qoute q-anime">
+        <div id="quote1" class="q-set q-size-n qoute">
+            “อมก๋อย” เป็นอำเภอใน จ.เชียงใหม่ มีอากาศเย็นตลอดปี
+            <br />ทำให้เหมาะสำหรับการท่องเที่ยวทางธรรมชาติที่มีความอุดมสมบูรณ์
+        </div>
+        <!-- <h1 id="quote1" class="q-set q-size-n qoute q-anime">
             <span class="text-wrapper">
                 <span class="line line1"></span>
                 <span class="letters">“อมก๋อย” เป็นอำเภอใน จ.เชียงใหม่ มีอากาศเย็นตลอดปี
                     ทำให้เหมาะสำหรับการท่องเที่ยวทางธรรมชาติที่มีความอุดมสมบูรณ์</span>
             </span>
-        </h1>
+        </h1> -->
 
         <div id="quote2" class="q-set q-size-b qoute">
             ทั้งนี้ ยังเป็นบ้านของกลุ่มชาติพันธุ์กะเหรี่ยงโป มีการทำไร่หมุนเวียน เป็นแหล่งปลูกมะเขือเทศ
@@ -70,7 +74,7 @@
 
     <section id="page2" class="page">
         <img class="tat" alt="truck and tomato" src="./img/truckandtomato.png" />
-        <div id="quote3" class="q-set q-size-n qoute">
+        <div id="quote3" class="q-set q-size-b qoute">
             “หน้าแล้งไม่มีมะเขือเทศที่ไหนมีแค่กะเบอะดินแค่อมก๋อยที่เดียว” คำพูดของผู้รับซื้อมะเขือเทศ
             เพื่อตอกย้ำให้เห็นว่า
             น้ำทำให้ที่นี่เป็นแหล่งปลูกมะเขือเทศแห่งหนึ่งที่สำคัญของประเทศไทย
@@ -136,7 +140,7 @@
     </section>
 
     <section id="page4" class="page">
-        <img class="gognam" src="./img/gognam.png" alt="gognam">
+        <img class="gognam" src="./img/gognum1.png" alt="gognam">
         <img class="drop" src="./img/drop.png" alt="drop">
         <div class="dropbox"></div>
         <div id="quote5" class="q-set q-size-n qoute">
@@ -147,7 +151,7 @@
         <div class="box"></div>
         <script>
             $(function () {
-                let tween = TweenMax.to(".drop", 1, { scale: 1, opacity: 1 });
+                let tween = TweenMax.to(".drop", 1, { scale: 1 });
 
                 let scene = new ScrollMagic.Scene({
                     triggerElement: ".gognam",
@@ -157,9 +161,13 @@
                 })
                     .setPin(".drop", { pushFollowers: false })
                     .setTween(tween)
+                    .on('start', () => {
+                        $('.gognam').attr("src", "./img/gognam.png")
+                    })
                     .on('leave', () => {
                         $('.drop').hide();
                         $('.drop').css('zIndex', '-99');
+                        $('.gognam').attr("src", "./img/gognum1.png")
                     })
                     .on('enter', () => {
                         $('.drop').show();

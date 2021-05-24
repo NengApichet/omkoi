@@ -79,6 +79,10 @@ body {
   height: 41vw;
 }
 
+.wheel1 {
+  position: absolute;
+}
+
 .house1 {
   position: absolute;
   height: 45vw;
@@ -98,7 +102,6 @@ body {
   margin-left: -17%;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
-  opacity: 0;
 }
 
 .water1 {
@@ -258,11 +261,11 @@ body {
 }
 
 .q-size-n {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .q-size-b {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .q-set {
@@ -276,20 +279,20 @@ body {
 
 #quote1 {
   top: 5%;
-  width: 30rem;
+  width: 40rem;
   margin-top: 21%;
   color: #fff;
 }
 
 #quote2 {
-  margin-top: 25rem;
-  width: 40rem;
+  margin-top: 35%;
+  width: 55rem;
 }
 
 #quote3 {
-  margin-top: -31%;
+  margin-top: -35%;
   margin-left: 5%;
-  width: 30%;
+  width: 38%;
   text-align: start;
 }
 
@@ -391,15 +394,14 @@ body {
 }
 
 #page1 {
+  background: #ffba98a1;
   background-image: url("../img/mountain2.png"), url("../img/mountain1.png"), url("../img/mountain3.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 #page2 {
-  background: #9afcff;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9afcff), color-stop(15%, #f9fdf5));
-  background: linear-gradient(0deg, #9afcff 0%, #f9fdf5 15%);
+  background: #ffba98a1;
 }
 
 #page3 {
