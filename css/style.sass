@@ -47,6 +47,17 @@ body
     margin: 0 auto
     display: inline-block
 
+.sun
+    position: absolute
+    width: 200px
+    height: 200px
+    background: #fd0
+    border-radius: 100%
+    box-shadow: 0px 0px 30px 10px #fa0
+    left: calc(50vw - 140px)
+    top: 100px
+    z-index: -1
+
 .tomato
     @extend %image-sets
     width: 10vw
@@ -95,9 +106,10 @@ body
 
 .water1
     @extend %image-sets
-    margin-top: -5%
+    margin-top: -15%
     min-width: 200%
-    height: 400px
+    height: 600px
+    z-index: 55
 
 .dropbox
     position: absolute
@@ -112,7 +124,6 @@ body
     width: 100vw
     height: 100vh
     background: rgb(88,211,255)
-    background: linear-gradient(180deg, rgba(88,211,255,1) 0%, rgba(72,126,145,1) 54%, rgba(82,58,47,1) 100%)
     margin-top: -1%
 
 .submit
@@ -145,6 +156,7 @@ body
 
 .paper
     display: block
+    line-height: 1.6
     position: absolute
     height: 100%
     width: 40%
@@ -158,8 +170,8 @@ body
 
 .q-paper
     display: inline-block
-    text-align: center
-    margin-top: 3rem
+    text-align: left
+    margin-top: 3%
     padding: 2em
 
 .house2
@@ -245,6 +257,9 @@ body
 .q-size-b
     font-size: 2rem
 
+.q-size-o
+    font-size: 4rem
+
 .q-set
     position: absolute
     margin-left: auto
@@ -280,37 +295,39 @@ body
     text-align: start
 
 #quote5
-    margin-top: -10%
-    margin-left: 45%
-    width: 40%
+    margin-top: -20%
+    margin-left: 40%
+    width: 40rem
 
 #quote7
     position: relative
     color: #fff
     margin-top: 30%
-    margin-left: 30%
-    margin-right: 30%
+    margin-left: 25%
+    margin-right: 25%
 
 #quote8
     position: relative
-    padding-top: 60rem
-    margin-bottom: 10rem
+    padding-top: 60%
+    margin-bottom: 20%
 
 #quote9
     list-style: none
-    width: 30%
+    width: 40%
 
     li
-        margin: 8em 0
+        margin: 20% 0
+        letter-spacing: 1px
+        line-height: 1.7
 
 #quote10
     position: relative
-    padding-top: 13rem
-    width: 40%
+    padding-top: 10%
+    width: 60%
 
 #quote11
-    padding-top: 13rem
-    width: 40%
+    padding-top: 10%
+    width: 60%
     color: #fff
 
 #quote12
@@ -362,18 +379,28 @@ body
     background: #ffba98a1
 
 #page3
+    background: #f0f6fc
     background-image: url('../img/bg_mountain.jpg')
     background-repeat: no-repeat
     background-size: 100% 100%
     min-height: 108vh
     width: 100vw
 
+#page4
+    background: #f0f6fc
+
 #page5
-    background: rgb(0,0,0)
-    background: linear-gradient(180deg, rgba(0,0,0,1) 80%, rgba(255,255,255,1) 100%)
+    background: #191515
+
+#page6
+    background: url('../img/grass.jpg')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    min-height: 108vh
+    width: 100vw
 
 #page8
-    background: rgb(0,0,0)
+    background: #191515
 
 .parallaxParent
     height: 100vh

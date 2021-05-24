@@ -26,7 +26,7 @@
 
 <body>
     <script> let controller = new ScrollMagic.Controller();</script>
-
+    <div class="sun"></div>
     <section id="page1" class="page">
 
         <div class="header qoute">อมก๋อย
@@ -118,7 +118,7 @@
         <div class="dropbox"></div>
         <img class="house1" src="./img/house1.png" alt="house1">
         <img class="dirt" src="./img/dirt.png" alt="dirt">
-        <img class="truck" alt="truck" src="./img/truck.png" >
+        <img class="truck" alt="truck" src="./img/truck.png">
         <div id="quote4" class="q-set q-size-nb qoute">
             “น้ำสะอาด” จากห้วยน้ำ ลำธาร ถือเป็นหัวใจหลักในการทำเกษตรกรรม รวมถึงเป็นน้ำที่ใช้อุปโภค บริโภค
             ในบางปีที่น้ำฝนไม่เพียงพอ เกษตรกรจำเป็นต้องบรรทุกน้ำใส่รถกระบะ เพื่อใช้ทำการเกษตร
@@ -150,9 +150,9 @@
     <section id="page4" class="page">
         <img class="gognam" src="./img/gognum1.png" alt="gognam">
         <img class="drop" src="./img/drop.png" alt="drop">
-        <div id="quote5" class="q-set q-size-n qoute">
+        <div id="quote5" class="q-set q-size-b qoute">
             จะมีท่อส่งน้ำจากต้นน้ำไปยังบ้านทุกหลัง ให้ทุกคนได้เข้าถึงน้ำสะอาดที่ใช้ในการอุปโภค บริโภค และการเกษตร
-            น้ำสายนี้ที่เย็นชื่นใจชาวบ้านจะเรียกว่า”น้ำประปาภูเขา
+            น้ำสายนี้ที่เย็นชื่นใจชาวบ้านจะเรียกว่า "น้ำประปาภูเขา"
         </div>
         <img class="water1" src="./img/water1.png" alt="water1">
         <div class="box"></div>
@@ -168,12 +168,12 @@
                 })
                     .setPin(".drop", { pushFollowers: false })
                     .setTween(tween)
-                    .on('start', () => {
+                    .on('enter', () => {
                         $('.gognam').attr("src", "./img/gognam.png")
                     })
                     .on('leave', () => {
                         $('.drop').hide();
-                        $('.drop').css('zIndex', '-99');
+                        $('.drop').css('zIndex', '1');
                         $('.gognam').attr("src", "./img/gognum1.png")
                     })
                     .on('enter', () => {
@@ -189,16 +189,16 @@
         <img class="stalactitie1" src="./img/stalactitie1.png" alt="stalactitie1">
         <img class="stalactite2" src="./img/stalactite2.png" alt="stalactite2">
         <img class="pickaxe" src="./img/pickaxe.png" alt="pickaxe">
-      
+
         <div class="paper">
-            <div id="quote6" class="text qoute q-size-n q-paper">ในปี 2543
+            <div id="quote6" class="text qoute q-size-nb q-paper">ในปี 2543
                 ได้มีการยื่นคำขอประทานบัตรทำเหมืองถ่านหินจากกรมอุตสาหกรรมพื้นฐานและการเหมืองแร่
                 ระยะเวลาในการยื่นขอทำสัมปทาน 10 ปี หากโครงการเหมืองแห่งนี้เกิดขึ้นจริง
                 อาจส่งผลให้ชุมชนไม่สามารถใช้ทรัพยากรแห่งนี้เพื่อปลูกพืชผลทางการเกษตรรวมถึงใช้อุปโภคบริโภคในชีวิตประจำวันได้อีกต่อไป
             </div>
             <img class="submit" src="./img/submit.png" alt="submit">
         </div>
-        <div id="quote7" class="q-set q-size-n qoute">
+        <div id="quote7" class="q-set q-size-b qoute">
             นี่ไม่ใช่ปัญหาที่มีแค่ชุมชนในอมก๋อยเผชิญ แต่รวมถึงพืชผลทางการเกษตรที่จะได้รับผลกระทบไปด้วย
             ผลกระทบเหล่านี้จะมาถึงพวกเราที่อยู่ในส่วนของผู้บริโภคในห่วงโซ่ระบบการผลิตอาหาร
         </div>
@@ -252,7 +252,7 @@
                     .addIndicators({ name: "rock" })
                     .addTo(controller);
 
-                let tween3 = TweenMax.to(".submit", 1, { ease: Linear.easeNone, scale:1});
+                let tween3 = TweenMax.to(".submit", 1, { ease: Linear.easeNone, scale: 1 });
 
                 let scene3 = new ScrollMagic.Scene({
                     triggerElement: ".paper",
@@ -277,14 +277,14 @@
         <img class="house3" src="./img/house3.png" alt="house3">
         <img class="man" src="./img/protest1yim.png" alt="man">
         <img class="woman" src="./img/protest3yim.png" alt="woman">
-        <div id="quote8" class="q-set q-size-n qoute">
+        <div id="quote8" class="q-set q-size-o qoute">
             ผลกระทบจากเหมือง
         </div>
         <img class="house2-broken" src="./img/house2broken.png" alt="house2 broken">
         <img class="house3-broken" src="./img/house3broken.png" alt="house3 broken">
         <img class="man-unhap" src="./img/protest1.png" alt="man unhap">
         <img class="woman-unhap" src="./img/protest3.png" alt="woman unhap">
-        <div id="quote9" class="q-set q-size-n qoute">
+        <div id="quote9" class="q-set q-size-nb qoute">
             <li>ทำให้วิถีชีวิตของชาวอมก๋อยเปลี่ยนไป
             </li>
             <li>ชาวบ้านคัดค้านไม่ต้องการให้สัมปทานเหมืองถ่านหินแห่งนี้เอาวิถีชีวิต อัตลักษณ์ และทรัพยากรชุมชนของพวกเขาไป
@@ -452,7 +452,7 @@
         <img class="truck-run truck2" src="./img/truck2.png" alt="truck2">
         <img class="truck-run truck3" src="./img/truck2andcoal.png" alt="truck and coal">
         <img class="truck-run truck4" src="./img/truck2andcoal.png" alt="truck and coal2">
-        <div id="quote10" class="q-set q-size-n qoute">
+        <div id="quote10" class="q-set q-size-b qoute">
             ไม่เพียงเท่านั้น เส้นทางการเดินทางของถ่านหินที่จะขนส่งผ่านหลายหมู่บ้านจะเป็นผลกระทบสำคัญทางคมนาคม
             คงจะไม่ดีแน่หากเส้นทางนี้มีรถบรรทุกถ่านหินขนาดใหญ่มาวิ่งร่วมกันในถนนเส้นทางลาดชันและมีผู้ใช้เส้นทางจำนวนมาก
         </div>
@@ -501,7 +501,7 @@
     </section>
     <section id="page8" class="page">
         <div class="boxend"></div>
-        <div id="quote11" class="q-set q-size-n qoute">
+        <div id="quote11" class="q-set q-size-nb qoute">
             การเรียกร้องของชาวอมก๋อย
             ชาวอมก๋อยกว่า 500 ​คน​ ร่วมประกอบพิธีบวชป่า กิจกรรมทำแนวกันไฟ เพื่อแสดงเจตนารมณ์ว่า
             “ชาวอมก๋อยไม่ต้องการให้วิถีชีวิตและอัตลักษณ์จากสิ่งชั่วร้ายมาเอาไปซึ่งผืนดินและทรัพยากรชุมชน
@@ -537,7 +537,6 @@
     </section>
 
     <script src="./js/script.js"></script>
-
 </body>
 
 </html>
