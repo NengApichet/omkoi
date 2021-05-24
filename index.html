@@ -115,9 +115,10 @@
     </section>
 
     <section id="page3" class="page">
+        <div class="dropbox"></div>
         <img class="house1" src="./img/house1.png" alt="house1">
-        <img class="glass" src="./img/glass.png" alt="glass">
-        <img class="truck" alt="truck" src="./img/truck.png" />
+        <img class="dirt" src="./img/dirt.png" alt="dirt">
+        <img class="truck" alt="truck" src="./img/truck.png" >
         <div id="quote4" class="q-set q-size-nb qoute">
             “น้ำสะอาด” จากห้วยน้ำ ลำธาร ถือเป็นหัวใจหลักในการทำเกษตรกรรม รวมถึงเป็นน้ำที่ใช้อุปโภค บริโภค
             ในบางปีที่น้ำฝนไม่เพียงพอ เกษตรกรจำเป็นต้องบรรทุกน้ำใส่รถกระบะ เพื่อใช้ทำการเกษตร
@@ -149,7 +150,6 @@
     <section id="page4" class="page">
         <img class="gognam" src="./img/gognum1.png" alt="gognam">
         <img class="drop" src="./img/drop.png" alt="drop">
-        <div class="dropbox"></div>
         <div id="quote5" class="q-set q-size-n qoute">
             จะมีท่อส่งน้ำจากต้นน้ำไปยังบ้านทุกหลัง ให้ทุกคนได้เข้าถึงน้ำสะอาดที่ใช้ในการอุปโภค บริโภค และการเกษตร
             น้ำสายนี้ที่เย็นชื่นใจชาวบ้านจะเรียกว่า”น้ำประปาภูเขา
@@ -189,12 +189,14 @@
         <img class="stalactitie1" src="./img/stalactitie1.png" alt="stalactitie1">
         <img class="stalactite2" src="./img/stalactite2.png" alt="stalactite2">
         <img class="pickaxe" src="./img/pickaxe.png" alt="pickaxe">
+      
         <div class="paper">
             <div id="quote6" class="text qoute q-size-n q-paper">ในปี 2543
                 ได้มีการยื่นคำขอประทานบัตรทำเหมืองถ่านหินจากกรมอุตสาหกรรมพื้นฐานและการเหมืองแร่
                 ระยะเวลาในการยื่นขอทำสัมปทาน 10 ปี หากโครงการเหมืองแห่งนี้เกิดขึ้นจริง
                 อาจส่งผลให้ชุมชนไม่สามารถใช้ทรัพยากรแห่งนี้เพื่อปลูกพืชผลทางการเกษตรรวมถึงใช้อุปโภคบริโภคในชีวิตประจำวันได้อีกต่อไป
             </div>
+            <img class="submit" src="./img/submit.png" alt="submit">
         </div>
         <div id="quote7" class="q-set q-size-n qoute">
             นี่ไม่ใช่ปัญหาที่มีแค่ชุมชนในอมก๋อยเผชิญ แต่รวมถึงพืชผลทางการเกษตรที่จะได้รับผลกระทบไปด้วย
@@ -250,14 +252,20 @@
                     .addIndicators({ name: "rock" })
                     .addTo(controller);
 
-                // let tween3 = TweenMax.to(".rock3", 1, { ease: Linear.easeNone, opacity: 1 });
+                let tween3 = TweenMax.to(".submit", 1, { ease: Linear.easeNone, scale:1});
 
                 let scene3 = new ScrollMagic.Scene({
                     triggerElement: ".paper",
-                    duration: 500,
-                    offset: 0,
+                    duration: 700,
+                    offset: 250,
                 })
-                    // .setTween(tween3)
+                    .setTween(tween3)
+                    .on('leave', () => {
+                        $('.submit').hide().delay(500);
+                    })
+                    .on('start', () => {
+                        $('.submit').show().delay(500);
+                    })
                     .addIndicators({ name: "paper" })
                     .addTo(controller);
             });

@@ -51,12 +51,14 @@ body
     @extend %image-sets
     width: 10vw
     margin-left: 12%
+    z-index: 99
 
 .tat
     @extend %image-sets
     margin-top: -23%
     margin-left: 33%
     width: 50vw
+    z-index: 999
 
 .truck
     @extend  %image-sets
@@ -72,10 +74,12 @@ body
     margin-left: 0%
     z-index: 99
 
-.glass
+.dirt
     position: absolute
     width: 100%
-    height: 10px
+    height: 100%
+    margin-top: -50%
+    z-index: 1
 
 .gognam
     @extend  %image-sets
@@ -96,12 +100,12 @@ body
     height: 400px
 
 .dropbox
-    width: 100vw
-    height: 25%
-    margin-top: -47%
     position: absolute
-    z-index: -1
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(148,223,94,1) 60%)
+    width: 100vw
+    height: 35%
+    background: #9afcff
+    margin-top: -15%
+    z-index: 1
 
 .box
     position: relative
@@ -110,6 +114,15 @@ body
     background: rgb(88,211,255)
     background: linear-gradient(180deg, rgba(88,211,255,1) 0%, rgba(72,126,145,1) 54%, rgba(82,58,47,1) 100%)
     margin-top: -1%
+
+.submit
+    display: inline-block
+    position: absolute
+    width: 10vw
+    margin-top: 85%
+    margin-left: -36%
+    z-index: 99
+    transform: scale(2.5)
 
 .stalactitie1
     @extend %image-sets
@@ -133,7 +146,7 @@ body
 .paper
     display: block
     position: absolute
-    height: 35rem
+    height: 100%
     width: 40%
     background: #ffedd2
     margin-left: 12%
@@ -256,13 +269,14 @@ body
     margin-left: 5%
     width: 38%
     text-align: start
+    color: #fff
 
 #quote4
-    text-indent: 50px
+    text-indent: 4em
     line-height: 1.8
     margin-top: -13%
     margin-left: 50%
-    width: 35rem
+    width: 39rem
     text-align: start
 
 #quote5
@@ -351,7 +365,7 @@ body
     background-image: url('../img/bg_mountain.jpg')
     background-repeat: no-repeat
     background-size: 100% 100%
-    min-height: 100vh
+    min-height: 108vh
     width: 100vw
 
 #page5
