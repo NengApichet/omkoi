@@ -349,8 +349,7 @@
             ไม่เพียงเท่านั้น เส้นทางการเดินทางของถ่านหินที่จะขนส่งผ่านหลายหมู่บ้านจะเป็นผลกระทบสำคัญทางคมนาคม
             คงจะไม่ดีแน่หากเส้นทางนี้มีรถบรรทุกถ่านหินขนาดใหญ่มาวิ่งร่วมกันในถนนเส้นทางลาดชันและมีผู้ใช้เส้นทางจำนวนมาก
         </div>
-        <div class="s5"></div>
-        <div class="s5"></div>
+        <div class="s3"></div>
         <script>
             $(function () {
                 let tween = TweenMax.to(".rock3", 1, { ease: Linear.easeNone, rotation: 1080, scale: 2 });
@@ -390,6 +389,42 @@
                     .setTween(tween2)
                     .addIndicators({ name: "truck run" })
                     .addTo(controller);
+            });
+        </script>
+    </section>
+    <section id="page8" class="page">
+        <div class="boxend"></div>
+        <div id="quote11" class="q-set q-size-n qoute">
+            การเรียกร้องของชาวอมก๋อย
+            ชาวอมก๋อยกว่า 500 ​คน​ ร่วมประกอบพิธีบวชป่า กิจกรรมทำแนวกันไฟ เพื่อแสดงเจตนารมณ์ว่า
+            “ชาวอมก๋อยไม่ต้องการให้วิถีชีวิตและอัตลักษณ์จากสิ่งชั่วร้ายมาเอาไปซึ่งผืนดินและทรัพยากรชุมชน
+            และยืนยันว่าจะปกป้องทรัพยากรของประเทศต่อไป”
+            ชาวอมก๋อยแสดงจุดยืนในนามของคนอมก๋อยว่าพวกเขาเหล่านี้ไม่ต้องการให้เกิดการขุด“ถ่านหิน”
+            เชื้อเพลิงที่จะส่งผลกระทบเป็นวงกว้าง “อมก๋อย” ไม่ได้เป็นเพียงแค่เมืองอากาศดีเท่านั้น แต่อมก๋อยมี
+            “ที๊งคูเท๊ะฌี้ (ต้นน้ำดีที่อมก๋อย)”
+            ที่พวกเขาจะต้องปกป้องและรักษาไม่ให้เกิดโครงการที่ทำลายวิถีความเป็นอยู่ทุกด้าน
+
+        </div>
+        <div id="parallax" class="parallaxParent">
+            <div style="background-image: url(./img/bg_end.jpg);">
+            </div>
+        </div>
+        <div class="boxend"></div>
+        <div id="quote12" class="q-set q-size-n qoute">
+            “การต่อสู้ของชาวอมก๋อยในครั้งนี้ไม่ใช่การต่อสู้เรียกร้องในสิทธิ์การคัดค้านสัมปทานเหมืองถ่านหินเพียงลำพังเท่านั้น
+            แต่เราที่เป็นคนอีกกลุ่มซึ่งได้รับทรัพยากรและผลผลิตจากชาวอมก๋อยทั้งอาหารที่เราบริโภคหรือน้ำจากแหล่งต้นน้ำก็ตาม
+            เราทุกคนต่างได้ร่วมใช้ทรัพยากรธรรมชาติทั้งทางตรงและทางอ้อม”
+        </div>
+
+        <script>
+            $(function () {
+                let controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
+
+                new ScrollMagic.Scene({ triggerElement: "#parallax" })
+                    .setTween("#parallax > div", { y: "80%", ease: Linear.easeNone })
+                    .addIndicators()
+                    .addTo(controller);
+
             });
         </script>
     </section>

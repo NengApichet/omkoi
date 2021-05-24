@@ -249,6 +249,12 @@ body {
           transform: rotateY(180deg);
 }
 
+.boxend {
+  height: 50vh;
+  width: 100vw;
+  background: #000;
+}
+
 .q-size-n {
   font-size: 1.1rem;
 }
@@ -322,6 +328,19 @@ body {
   width: 40%;
 }
 
+#quote11 {
+  padding-top: 13rem;
+  width: 40%;
+  color: #fff;
+}
+
+#quote12 {
+  position: relative;
+  padding: 30rem 0;
+  width: 50%;
+  color: #fff;
+}
+
 .q-anime {
   display: block;
 }
@@ -377,5 +396,21 @@ body {
   background: black;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, black), to(white));
   background: linear-gradient(180deg, black 80%, white 100%);
+}
+
+#page8 {
+  background: black;
+}
+
+.parallaxParent {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallaxParent div {
+  height: 200%;
+  position: relative;
+  top: -100%;
+  opacity: 0.3;
 }
 /*# sourceMappingURL=style.css.map */
