@@ -116,8 +116,9 @@
 
     <section id="page3" class="page">
         <img class="house1" src="./img/house1.png" alt="house1">
+        <img class="glass" src="./img/glass.png" alt="glass">
         <img class="truck" alt="truck" src="./img/truck.png" />
-        <div id="quote4" class="q-set q-size-n qoute">
+        <div id="quote4" class="q-set q-size-nb qoute">
             “น้ำสะอาด” จากห้วยน้ำ ลำธาร ถือเป็นหัวใจหลักในการทำเกษตรกรรม รวมถึงเป็นน้ำที่ใช้อุปโภค บริโภค
             ในบางปีที่น้ำฝนไม่เพียงพอ เกษตรกรจำเป็นต้องบรรทุกน้ำใส่รถกระบะ เพื่อใช้ทำการเกษตร
         </div>
@@ -132,6 +133,12 @@
 
                 })
                     // .setPin(".truck", { pushFollowers: false })
+                    .on('enter', () => {
+                        $('.house1').attr('src', './img/house1op.png');
+                    })
+                    .on('leave', () => {
+                        $('.house1').attr('src', './img/house1.png');
+                    })
                     .setTween(tween)
                     .addIndicators({ name: "truck" })
                     .addTo(controller);
@@ -241,6 +248,17 @@
                     .setPin(".rock3", { pushFollowers: true })
                     .setTween(tween2)
                     .addIndicators({ name: "rock" })
+                    .addTo(controller);
+
+                // let tween3 = TweenMax.to(".rock3", 1, { ease: Linear.easeNone, opacity: 1 });
+
+                let scene3 = new ScrollMagic.Scene({
+                    triggerElement: ".paper",
+                    duration: 500,
+                    offset: 0,
+                })
+                    // .setTween(tween3)
+                    .addIndicators({ name: "paper" })
                     .addTo(controller);
             });
         </script>
