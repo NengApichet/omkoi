@@ -222,6 +222,33 @@ body {
   margin-left: 15%;
 }
 
+.truck2 {
+  position: absolute;
+  height: 41vw;
+  margin-top: 20rem;
+  margin-left: -36%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.truck3 {
+  position: absolute;
+  height: 50vw;
+  margin-top: 14rem;
+  margin-left: 14%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.truck4 {
+  position: absolute;
+  height: 50vw;
+  margin-top: 14rem;
+  margin-left: 64%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .q-size-n {
   font-size: 1.1rem;
 }
@@ -286,7 +313,13 @@ body {
 }
 
 #quote9 li {
-  margin: 10em 0;
+  margin: 8em 0;
+}
+
+#quote10 {
+  position: relative;
+  padding-top: 13rem;
+  width: 40%;
 }
 
 .q-anime {

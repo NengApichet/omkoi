@@ -97,7 +97,7 @@
                     duration: 300,
                     offset: 1100,
                 })
-                    .setPin(".tat", { pushFollowers: false })
+                    // .setPin(".tat", { pushFollowers: false })
                     .setTween(tween2)
                     .on("start", () => {
                         $(".tomato").hide();
@@ -117,7 +117,7 @@
         </div>
         <script>
             $(function () {
-                let tween = TweenMax.to(".truck", 1, { ease: Linear.easeNone, x: "-350%", y: "-110%" });
+                let tween = TweenMax.to(".truck", 1, { ease: Linear.easeNone, x: "-350%" });
 
                 let scene = new ScrollMagic.Scene({
                     triggerElement: ".tomato",
@@ -125,7 +125,7 @@
                     offset: 1500, //1400 base on from page 2
 
                 })
-                    .setPin(".truck", { pushFollowers: false })
+                    // .setPin(".truck", { pushFollowers: false })
                     .setTween(tween)
                     .addIndicators({ name: "truck" })
                     .addTo(controller);
@@ -259,9 +259,6 @@
             </li>
         </div>
         <div class="s5"></div>
-        <div class="s5"></div>
-        <div class="s5"></div>
-        <div class="s5"></div>
         <script>
             $(function () {
                 let tween = TweenMax.to(".rock3", 1, { ease: Linear.easeNone, rotation: 720 });
@@ -316,6 +313,9 @@
                     offset: 850
                 })
                     .setPin(".rock3", { pushFollowers: false })
+                    .on('enter', () => {
+                        $('.rock3').show();
+                    })
                     .setTween(tween)
                     .addIndicators({ name: "rock2" })
                     .addTo(controller);
@@ -342,8 +342,58 @@
     </section>
 
     <section id="page7" class="page">
-        <img src=".img" alt="">
+        <img class="truck-run truck2" src="./img/truck2.png" alt="truck2">
+        <img class="truck-run truck3" src="./img/truck2andcoal.png" alt="truck and coal">
+        <img class="truck-run truck4" src="./img/truck2andcoal.png" alt="truck and coal2">
+        <div id="quote10" class="q-set q-size-n qoute">
+            ไม่เพียงเท่านั้น เส้นทางการเดินทางของถ่านหินที่จะขนส่งผ่านหลายหมู่บ้านจะเป็นผลกระทบสำคัญทางคมนาคม
+            คงจะไม่ดีแน่หากเส้นทางนี้มีรถบรรทุกถ่านหินขนาดใหญ่มาวิ่งร่วมกันในถนนเส้นทางลาดชันและมีผู้ใช้เส้นทางจำนวนมาก
+        </div>
+        <div class="s5"></div>
+        <div class="s5"></div>
+        <script>
+            $(function () {
+                let tween = TweenMax.to(".rock3", 1, { ease: Linear.easeNone, rotation: 1080, scale: 2 });
+
+                let tween2 = TweenMax.to(".truck-run", 1, { ease: Linear.easeNone, x: "-500%" });
+
+                let scene = new ScrollMagic.Scene({
+                    triggerElement: ".rock3",
+                    duration: 300,
+                    offset: 3250,
+
+                })
+                    .setPin(".rock3", { pushFollowers: false })
+                    .setTween(tween)
+                    .on('leave', () => {
+                        $('.rock3').hide();
+                        $(".truck2").attr("src", "./img/truck2andcoal.png")
+                            .css("height", "50vw")
+                            .css("margin-top", "14rem");
+
+                    })
+                    .on('enter', () => {
+                        $('.rock3').show();
+                        $(".truck2").attr("src", "./img/truck2.png")
+                            .css("height", "41vw")
+                            .css("margin-top", "20rem");
+                    })
+                    .addIndicators({ name: "rock3" })
+                    .addTo(controller);
+
+                let scene2 = new ScrollMagic.Scene({
+                    triggerElement: ".truck2",
+                    duration: 500,
+                    offset: 200,
+
+                })
+                    .setTween(tween2)
+                    .addIndicators({ name: "truck run" })
+                    .addTo(controller);
+            });
+        </script>
     </section>
+
     <script src="./js/script.js"></script>
 
 </body>
