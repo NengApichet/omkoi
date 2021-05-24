@@ -42,12 +42,14 @@
             </span>
         </h1>
 
-        <div id="quote2" class="q-set q-size-n qoute">
+        <div id="quote2" class="q-set q-size-b qoute">
             ทั้งนี้ ยังเป็นบ้านของกลุ่มชาติพันธุ์กะเหรี่ยงโป มีการทำไร่หมุนเวียน เป็นแหล่งปลูกมะเขือเทศ
             และฟักทองแหล่งใหญ่เพื่อส่งออกไปยังหลายพื้นที่ ผลิตผลทั้งสองชนิดถือเป็นรายได้หลักของชุมชนกะเหรี่ยงแห่งนี้
         </div>
 
         <img class="tomato" alt="tomato" src="./img/tomato.png" />
+
+        <div class="bg-light"></div>
         <script>
             $(function () {
                 let tween = TweenMax.to(".tomato", 1, { rotation: 360, ease: Linear.easeNone });
@@ -263,29 +265,33 @@
             $(function () {
                 let tween = TweenMax.to(".rock3", 1, { ease: Linear.easeNone, rotation: 720 });
 
-                // let images = [
-                //     "./img/protest1yim.png",
-                //     "./img/poster1ani.png",
-                //     "./img/protest1yim.png",
-                //     "./img/poster1ani.png",
-                // ];
+                let images = [
+                    "./img/protest1yim.png",
+                    "./img/poster1ani.png",
+                    "./img/protest1yim.png",
+                    "./img/poster1ani.png",
+                    "./img/protest1yim.png",
+                    "./img/poster1ani.png",
+                ];
 
-                // let obj = { curImg: 0 };
+                let obj = { curImg: 0 };
 
-                // let tween2 = TweenMax.to(obj, 0.5,
-                //     {
-                //         curImg: images.length - 1,
-                //         roundProps: "curImg",
-                //         repeat: 3,
-                //         immediateRender: true,
-                //         ease: Linear.easeNone,
-                //         onUpdate: function () {
-                //             $(".man").attr("src", images[obj.curImg]);
-                //         }
-                //     }
-                // );
+                let tween2 = TweenMax.to(obj, 0.5,
+                    {
+                        curImg: images.length - 1,
+                        roundProps: "curImg",
+                        repeat: 3,
+                        immediateRender: true,
+                        ease: Linear.easeNone,
+                        onUpdate: function () {
+                            $(".man").attr("src", images[obj.curImg]);
+                        }
+                    }
+                );
 
                 let images2 = [
+                    "./img/protest3yim.png",
+                    "./img/poster3ani.png",
                     "./img/protest3yim.png",
                     "./img/poster3ani.png",
                     "./img/protest3yim.png",
@@ -298,11 +304,59 @@
                     {
                         curImg: images2.length - 1,
                         roundProps: "curImg",
-                        repeat: 2,
+                        repeat: 3,
                         immediateRender: true,
                         ease: Linear.easeNone,
                         onUpdate: function () {
                             $(".woman").attr("src", images2[obj2.curImg]);
+                        }
+                    }
+                );
+
+                let images3 = [
+                    "./img/protest1.png",
+                    "./img/protest1_1.png",
+                    "./img/protest1.png",
+                    "./img/protest1_1.png",
+                    "./img/protest1.png",
+                    "./img/protest1_1.png",
+                ];
+
+                let obj3 = { curImg: 0 };
+
+                let tween4 = TweenMax.to(obj3, 0.5,
+                    {
+                        curImg: images3.length - 1,
+                        roundProps: "curImg",
+                        repeat: 3,
+                        immediateRender: true,
+                        ease: Linear.easeNone,
+                        onUpdate: function () {
+                            $(".man-unhap").attr("src", images3[obj3.curImg]);
+                        }
+                    }
+                );
+
+                let images4 = [
+                    "./img/protest3.png",
+                    "./img/protest3_1.png",
+                    "./img/protest3.png",
+                    "./img/protest3_1.png",
+                    "./img/protest3.png",
+                    "./img/protest3_1.png",
+                ];
+
+                let obj4 = { curImg: 0 };
+
+                let tween5 = TweenMax.to(obj4, 0.5,
+                    {
+                        curImg: images4.length - 1,
+                        roundProps: "curImg",
+                        repeat: 3,
+                        immediateRender: true,
+                        ease: Linear.easeNone,
+                        onUpdate: function () {
+                            $(".woman-unhap").attr("src", images4[obj4.curImg]);
                         }
                     }
                 );
@@ -320,14 +374,14 @@
                     .addIndicators({ name: "rock2" })
                     .addTo(controller);
 
-                // let scene2 = new ScrollMagic.Scene({
-                //     triggerElement: ".rock3",
-                //     duration: 500,
-                //     offset: 1200
-                // })
-                //     .setTween(tween2)
-                //     .addIndicators({ name: "man" })
-                //     .addTo(controller);
+                let scene2 = new ScrollMagic.Scene({
+                    triggerElement: ".rock3",
+                    duration: 500,
+                    offset: 1200
+                })
+                    .setTween(tween2)
+                    .addIndicators({ name: "man" })
+                    .addTo(controller);
 
                 let scene3 = new ScrollMagic.Scene({
                     triggerElement: ".rock3",
@@ -336,6 +390,25 @@
                 })
                     .setTween(tween3)
                     .addIndicators({ name: "woman" })
+                    .addTo(controller);
+
+
+                let scene4 = new ScrollMagic.Scene({
+                    triggerElement: ".rock3",
+                    duration: 500,
+                    offset: 2400
+                })
+                    .setTween(tween4)
+                    .addIndicators({ name: "man un" })
+                    .addTo(controller);
+
+                let scene5 = new ScrollMagic.Scene({
+                    triggerElement: ".rock3",
+                    duration: 500,
+                    offset: 2400
+                })
+                    .setTween(tween5)
+                    .addIndicators({ name: "woman un" })
                     .addTo(controller);
             });
         </script>
