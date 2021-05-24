@@ -167,6 +167,7 @@ body
 .rock3
     @extend %image-sets
     height: 15vw
+    z-index: 999999
 
 .q-paper
     display: inline-block
@@ -177,12 +178,14 @@ body
 .house2
     position: absolute
     height: 35vw
+    z-index: 33
     margin-top: -5rem
     margin-left: 10%
 
 .house3
     position: absolute
     height: 40vw
+    z-index: 33
     margin-top: 3rem
     margin-left: -46%
 
@@ -247,6 +250,28 @@ body
     height: 50vh
     width: 100vw
     background: #000
+
+.dirtlayer
+    position: absolute
+    z-index: 44
+    width: 100%
+    height: 90%
+    margin-left: -50%
+    margin-top: 5%
+
+.sign1
+    position: absolute
+    width: 25vw
+    margin-top: 38%
+    margin-left: -33%
+    transform: rotate(350deg)
+
+.sign2
+    position: absolute
+    width: 25vw
+    margin-top: -23%
+    margin-left: 4%
+    transform: rotate(8deg)
 
 .q-size-n
     font-size: 1.5rem
@@ -366,7 +391,7 @@ body
     height: 60vh
     width: 100vw
     position: absolute
-    z-index: -1
+    z-index: -99
     top: 0
 
 #page1
@@ -392,12 +417,65 @@ body
 #page5
     background: #191515
 
-#page6
-    background: url('../img/grass.jpg')
-    background-repeat: no-repeat
-    background-size: 100% 100%
-    min-height: 108vh
+// #page6
+//     background: url('../img/grass.jpg')
+//     background-repeat: no-repeat
+//     background-size: 100% 100%
+//     min-height: 108vh
+//     width: 100vw
+
+.boxpage6-1
+    position: absolute
+    background: url('../img/grass1-2.png')
+    min-height: 160%
     width: 100vw
+    z-index: -99
+    margin-top: -2%
+
+.boxpage6-1-1
+    position: absolute
+    background: #191515
+    height: 50%
+    width: 100vw
+    z-index: -99
+    margin-top: -5%
+
+.boxpage6-2
+    position: absolute
+    background: url('../img/grass2.jpg')
+    min-height: 160%
+    width: 100vw
+    z-index: -99
+    margin-top: 160vh
+
+.boxpage6-2-1
+    position: absolute
+    background: url(../img/grass2_2.png)
+    height: 300px
+    width: 100vw
+    margin-top: 57%
+    z-index: -1
+
+.boxpage6-2-2
+    position: absolute
+    background: url(../img/grass2_2.png)
+    background-repeat: no-repeat
+    height: 175%
+    width: 100vw
+    margin-top: 85%
+    z-index: -1
+
+.boxpage7
+    position: absolute
+    background: #0a5d6b
+    width: 100vw
+    height: 250px
+    z-index: -99
+    margin-top: -12%
+
+#page7
+    background: url(../img/road.png)
+    background-repeat: no-repeat
 
 #page8
     background: #191515

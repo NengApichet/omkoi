@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Omkoi</title>
+    <link rel="shortcut icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="./css/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="./css/style.css">
 
@@ -155,6 +156,7 @@
             น้ำสายนี้ที่เย็นชื่นใจชาวบ้านจะเรียกว่า "น้ำประปาภูเขา"
         </div>
         <img class="water1" src="./img/water1.png" alt="water1">
+        <img class="dirtlayer" src="./img/dirtlayer.png" alt="dirt layer">
         <div class="box"></div>
         <script>
             $(function () {
@@ -273,6 +275,11 @@
     </section>
 
     <section id="page6" class="page">
+        <div class="boxpage6-1-1"></div>
+        <div class="boxpage6-1"></div>
+        <div class="boxpage6-2"></div>
+        <div class="boxpage6-2-1"></div>
+        <div class="boxpage6-2-2"></div>
         <img class="house2" src="./img/house2.png" alt="house2">
         <img class="house3" src="./img/house3.png" alt="house3">
         <img class="man" src="./img/protest1yim.png" alt="man">
@@ -284,6 +291,8 @@
         <img class="house3-broken" src="./img/house3broken.png" alt="house3 broken">
         <img class="man-unhap" src="./img/protest1.png" alt="man unhap">
         <img class="woman-unhap" src="./img/protest3.png" alt="woman unhap">
+        <img class="sign1" src="./img/sign1.png" alt="sign1">
+        <img class="sign2" src="./img/sign2.png" alt="sign2">
         <div id="quote9" class="q-set q-size-nb qoute">
             <li>ทำให้วิถีชีวิตของชาวอมก๋อยเปลี่ยนไป
             </li>
@@ -397,12 +406,13 @@
 
                 let scene = new ScrollMagic.Scene({
                     triggerElement: ".rock3",
-                    duration: 2400,
+                    duration: 2150,
                     offset: 850
                 })
                     .setPin(".rock3", { pushFollowers: false })
                     .on('enter', () => {
                         $('.rock3').show();
+
                     })
                     .setTween(tween)
                     .addIndicators({ name: "rock2" })
@@ -414,6 +424,14 @@
                     offset: 1200
                 })
                     .setTween(tween2)
+                    .on('enter', () => {
+                        $('.house2').attr('src', './img/house2op.png');
+                        $('.house3').attr('src', './img/house3op.png');
+                    })
+                    .on('leave', () => {
+                        $('.house2').attr('src', './img/house2.png');
+                        $('.house3').attr('src', './img/house3.png');
+                    })
                     .addIndicators({ name: "man" })
                     .addTo(controller);
 
@@ -433,6 +451,15 @@
                     offset: 2400
                 })
                     .setTween(tween4)
+                    .on('enter', () => {
+                        $('.house2-broken').attr('src', './img/house2brokenop.png');
+                        $('.house3-broken').attr('src', './img/house3brokenop.png');
+                    })
+                    .on('leave', () => {
+                        $('.house2-broken').attr('src', './img/house2broken.png');
+                        $('.house3-broken').attr('src', './img/house3broken.png');
+                    })
+                   
                     .addIndicators({ name: "man un" })
                     .addTo(controller);
 
@@ -449,6 +476,7 @@
     </section>
 
     <section id="page7" class="page">
+        <div class="boxpage7"></div>
         <img class="truck-run truck2" src="./img/truck2.png" alt="truck2">
         <img class="truck-run truck3" src="./img/truck2andcoal.png" alt="truck and coal">
         <img class="truck-run truck4" src="./img/truck2andcoal.png" alt="truck and coal2">
@@ -465,8 +493,8 @@
 
                 let scene = new ScrollMagic.Scene({
                     triggerElement: ".rock3",
-                    duration: 300,
-                    offset: 3250,
+                    duration: 550,
+                    offset: 3000,
 
                 })
                     .setPin(".rock3", { pushFollowers: false })
@@ -476,7 +504,6 @@
                         $(".truck2").attr("src", "./img/truck2andcoal.png")
                             .css("height", "50vw")
                             .css("margin-top", "14rem");
-
                     })
                     .on('enter', () => {
                         $('.rock3').show();
