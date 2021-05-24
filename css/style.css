@@ -52,7 +52,7 @@ body {
   height: 100%;
 }
 
-.tomato, .tat, .truck, .gognam, .drop, .water1, .stalactitie1, .stalactite2, .pickaxe {
+.tomato, .tat, .truck, .gognam, .drop, .water1, .stalactitie1, .stalactite2, .pickaxe, .rock3 {
   position: relative;
   margin: 0 auto;
   display: inline-block;
@@ -70,7 +70,7 @@ body {
 }
 
 .truck {
-  margin-top: 0;
+  margin-top: 5rem;
   margin-left: 100%;
   -webkit-transform: rotateY(180deg) scale(0.7);
           transform: rotateY(180deg) scale(0.7);
@@ -80,7 +80,7 @@ body {
 .house1 {
   position: absolute;
   height: 45vw;
-  margin-top: 4%;
+  margin-top: 5rem;
   margin-left: 0%;
   z-index: 99;
 }
@@ -132,7 +132,7 @@ body {
 
 .stalactite2 {
   margin-left: 0;
-  margin-top: -70em;
+  margin-top: -75em;
   width: 100%;
   z-index: 1;
 }
@@ -155,11 +155,71 @@ body {
   margin-top: -50%;
 }
 
+.rock3 {
+  height: 15vw;
+}
+
 .q-paper {
   display: inline-block;
   text-align: center;
   margin-top: 3rem;
   padding: 2em;
+}
+
+.house2 {
+  position: absolute;
+  height: 35vw;
+  margin-top: -5rem;
+  margin-left: 10%;
+}
+
+.house3 {
+  position: absolute;
+  height: 40vw;
+  margin-top: 3rem;
+  margin-left: -46%;
+}
+
+.man {
+  position: absolute;
+  height: 23vw;
+  margin-top: 23rem;
+  margin-left: 6%;
+}
+
+.woman {
+  position: absolute;
+  height: 21vw;
+  margin-top: 24rem;
+  margin-left: 15%;
+}
+
+.house2-broken {
+  position: absolute;
+  height: 35vw;
+  margin-top: -5rem;
+  margin-left: 10%;
+}
+
+.house3-broken {
+  position: absolute;
+  height: 40vw;
+  margin-top: 3rem;
+  margin-left: -46%;
+}
+
+.man-unhap {
+  position: absolute;
+  height: 23vw;
+  margin-top: 23rem;
+  margin-left: 6%;
+}
+
+.woman-unhap {
+  position: absolute;
+  height: 21vw;
+  margin-top: 24rem;
+  margin-left: 15%;
 }
 
 .q-size-n {
@@ -209,7 +269,24 @@ body {
 #quote7 {
   position: relative;
   color: #fff;
-  padding: 30%;
+  margin-top: 30%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#quote8 {
+  position: relative;
+  padding-top: 60rem;
+  margin-bottom: 10rem;
+}
+
+#quote9 {
+  list-style: none;
+  width: 30%;
+}
+
+#quote9 li {
+  margin: 10em 0;
 }
 
 .q-anime {
@@ -264,6 +341,8 @@ body {
 }
 
 #page5 {
-  background: #0f0f0f;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, black), to(white));
+  background: linear-gradient(180deg, black 80%, white 100%);
 }
 /*# sourceMappingURL=style.css.map */
