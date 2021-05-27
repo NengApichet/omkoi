@@ -431,9 +431,27 @@ body {
 
 #quote12 {
   position: relative;
-  padding: 30rem 0;
+  padding: 10rem 0 0 0 ;
   width: 50%;
   color: #fff;
+}
+
+.button1{
+  box-shadow:0px 0px 10px rgb(106, 106, 103);
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  position: relative;
+  border: 0;
+  border-radius: 30vw;
+  padding: 1% 3%;
+  font-family: 'Chonburi';
+  font-size: 1.5vw;
+  transition: all 0.5s;
+}
+
+.button1:hover{
+  background-color: rgb(219, 57, 57);
+  color: white;
 }
 
 .q-anime {
